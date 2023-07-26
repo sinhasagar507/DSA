@@ -1,0 +1,33 @@
+/*  Dynamic implementation of 2-D arrays in CPP - An array of vectors */
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   int m=3, n=2;
+   
+   int *arr[m];
+   for(int i=0; i<m; i++)
+        arr[i]=new int[n];
+      
+      
+   for(int i=0; i<m; i++)
+        for(int j=0; j<n; j++)
+            cin>>arr[i][j];
+            
+            
+    cout<<endl;
+            
+    for(int i=0; i<m; i++)
+    {
+        for(int j=0; j<n; j++)
+            cout<<arr[i][j]<<" ";
+            
+        cout<<endl;
+    }
+}
+
+
+// An array of vectors also works, though this ain't cache friendly either. vector<int> v[m]. Here the no. of rows are fixed, but the no. of columns can vary. 
+// A vector of vectors, this too ain't cache friendly, but works for many cases. vector<vector<int>> v. Here the no. of rows as well as columns vary. 

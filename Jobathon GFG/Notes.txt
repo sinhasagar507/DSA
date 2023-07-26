@@ -1,0 +1,3 @@
+1. Always check for the input parameters in the program
+2. Never rush to submit the solution. The solution would fail on one or more of the provided test cases. Think of all the possible variations. 
+3. 

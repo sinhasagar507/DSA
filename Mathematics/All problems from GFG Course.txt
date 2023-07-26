@@ -1,0 +1,9 @@
+1. Count trailing zeroes in a factorial = O(logn)
+2. Count Digits in a number - logarithmic code - include in macro. No. of Digits in a Number = log(n+1)(math log)
+3. Palindrome Nos. 
+4. GCD or HCF of two numbers - include in macros later. 
+5. Check for Prime - go till sqrt(n). Check for just 2 and 3 then go ahead. (n==1) and (n==2 || n==3) and then using the modulo operator (i=5; i*i <= n and i += 6) - One third complexity of sqrt(n). 
+6. Print divisors of a number. Print in sorted order. 
+7. Time Complexity of Sieve of Erasthothenes is O(nloglogn). 
+8. Compute power of a number efficiently(It will be covered later in Binary Exponentiation algorithm)
+	

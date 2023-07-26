@@ -1,0 +1,1 @@
+- Use a slow pointer which moves one node at a time, and a fast pointer which moves two nodes at a time. 

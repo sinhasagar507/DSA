@@ -1,0 +1,6 @@
+Binary Search Tree Notes:
+1. For every node, keys in left node are smaller and keys in right node are greater. 
+2. All keys are typically considered as distinct. 
+3. Like linked list, it is a linked data structure. 
+4. In C++, BST is implemented as map, set, multimap and multiset. All of these implement self-balancing binary search trees. 
+5. All important operations, including insertion, deletion, search and looking for the closest element occur in O(logn) TC in a BST. Traversal takes O(n) time.

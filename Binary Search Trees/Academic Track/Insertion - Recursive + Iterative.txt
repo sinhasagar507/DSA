@@ -1,0 +1,67 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Node  
+{ 
+  int key; 
+  struct Node *left; 
+  struct Node *right; 
+  Node(int k){
+      key=k;
+      left=right=NULL;
+  }
+};
+
+// Simple recursive solution to insert in a BST 
+Node *insert(Node *root, int x)
+{
+  if(root == NULL)
+	return new Node(x);
+
+  else if(x < root->key)
+	root->left = insert(root->left, x);
+	
+  else if(x > root->key)
+	root->right = insert(root->right, x);
+
+  return root;
+}
+
+// Simple Iterative solution to insertion in a BST - longer - not more optimized - in the case of trees and BST and other non-linear data structures, recursion has the lead
+Node *insert(Node *root, int x)
+{
+  Node *curr = root; Node *parent = NULL;
+  while(curr != NULL)
+  {
+    if(x < curr->key)
+    {
+	if(curr->left != NULL)
+		parent = curr->left;
+        curr = curr->left;
+    }
+
+    else if(x > curr->key)
+    {
+       if(curr->right != NULL)
+		parent = curr->right;
+        curr = curr->right;
+    }
+  }
+  
+  curr = new Node(x);
+  if(parent-key > curr->key)
+	parent->left = curr;
+  else
+        parent->right = curr;
+ 
+  return root;
+}
+
+// Level Order Traversal of a Binary Tree
+Aux. Space: Theta(1), Aux Space(theta(n))
+
+int main()
+{
+  Node *root = insert(root, 20);
+  return 0;
+}

@@ -1,0 +1,17 @@
+1. Remaining Questions:
+   - Level Order Line by Line 
+2. Converting a Binary Tree to a Doubly Linked List - O(n) Time Complexity and O(h) Auxiliary Space. Code in code files. 
+
+
+
+What is required:
+1. Complete revision of all data structures as discussed and studied 
+2. Trees - and brand new 3 questions 
+3. Revise and analyse 
+4. Retrain - on 3 questions - half hr. on medium level ques. and 1 hr. on higher level ques. 
+5. Stay put for 5 mins. - and think how would I try them in Python 
+
+Ques. Constructing a binary tree from an array 
+Ques. Deletion from a binary tree 
+Ques. Constructing hash functions from an array using unordered set
+Ques. 

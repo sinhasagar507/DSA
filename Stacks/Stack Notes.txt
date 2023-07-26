@@ -1,0 +1,3 @@
+QUESTIONS:
+1. The maximum area covered by all 1s in an array - Note down the pattern. Write its steps. 
+2. 
