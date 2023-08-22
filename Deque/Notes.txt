@@ -1,0 +1,6 @@
+- Dequeue or doubly ended queue is a generalized version of the Queue data structure that allows insert AND deletion at both ends. It supports the access of elements in O(1) time complexity and the insertion and deletion of elements from front and back are both done with O(1) time complexity. 
+
+- How a dequeue works internally? 
+Ans. https://www.geeksforgeeks.org/how-deque-works-internally-in-cpp/
+
+- 

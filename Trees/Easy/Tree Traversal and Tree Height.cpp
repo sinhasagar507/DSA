@@ -355,8 +355,7 @@ Node *cTree(int pre[], int post[], int is, int ie)
 
 
 
-int main()
-{
+int main() {
 	
 	int in[]={20,10,40,30,50};
 	int pre[]={10,20,30,40,50};
