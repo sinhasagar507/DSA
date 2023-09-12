@@ -1,0 +1,3 @@
+1. XOR's cumulative property: a XOR b XOR c XOR ... XOR n = (a XOR b) XOR c XOR ... XOR n = a XOR (b XOR c XOR ... XOR n)
+2. XOR's associative property: (a XOR b) XOR c = a XOR (b XOR c)
+3. 

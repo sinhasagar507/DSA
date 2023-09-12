@@ -1,3 +1,4 @@
+/* 
 1. How the Dutch National Flag algorithm is applied to QuickSort?
 2. Sort around a given range
 3. Focus on algorithms - don't use the OOPs concept now
@@ -25,9 +26,4 @@ Web/Data Scraping Tools used:
 3. Octoparse 
 4. Email Extractor and related stuff 
 5. Google Dorking: Oh yeah..., I can try this stuff in pastime - It seems interesting 
-
-
-
-
-
-
+*/

@@ -23,7 +23,6 @@ int main()
     int n;
     cin>>n;
     
-    int i=1;
     lexicoGraphicOrder(n, 0);
     return 0;
 }

@@ -1,4 +1,11 @@
-/* Equilibrium Point - Efficient Technique */
+/* Equilibrium Index in an Array
+
+   The equilibrium index of an array is an index such that the sum of elements at lower indexes 
+   is equal to the sum of elements at higher indexes 
+   
+   Amortized Time Complexity: 
+
+ */
 
 #include<bits/stdc++.h>
 using namespace std;

@@ -5,7 +5,7 @@ using namespace std;
 
 void printGroups(int arr[], int n)
 {
-        for (int i=0; i<n; i++)
+        for (int i=1; i<n; i++)
         {
                 // If current element is not the same as previous 
                 if (arr[i] != arr[i-1])

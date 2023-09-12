@@ -1,25 +1,14 @@
-// { Driver Code Starts
-//Initial Template for C
+/*
+Problem Statement: Insert element at given index 
+Time Complexity: theta(1)
+Space Complexity: theta(1)
+*/
 
 #include <stdio.h>
-
-void insertAtEnd(int arr[],int sizeOfArray,int element);
-
-
- // } Driver Code Ends
-//User function Template for C
-
-
-// You only need to insert the given element at 
-// the end, i.e., at index sizeOfArray - 1. You may 
-// assume that the array already has sizeOfArray - 1
-// elements. 
 void insertAtEnd(int arr[],int sizeOfArray,int element)
 {
     arr[sizeOfArray-1]=element;
 }
-
-// { Driver Code Starts.
 
 int main() {
     int t;
@@ -53,6 +42,4 @@ int main() {
         printf("\n");
         
     }
-    
 	return 0;
-}  // } Driver Code Ends

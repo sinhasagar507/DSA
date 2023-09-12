@@ -1,4 +1,8 @@
-/* Given an array of 0s, 1s and 2s, sort the array in ascending order. Apply Dutch National Flag Algorithm from now on. */
+/* 
+Problem - Given an array of 0s, 1s and 2s, sort the array in ascending order
+Time Complexity of this algorithm: theta(mn)
+Space Complexity: theta(n)
+*/
 
 #include<bits/stdc++.h>
 using namespace std;

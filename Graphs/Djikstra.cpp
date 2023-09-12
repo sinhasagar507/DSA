@@ -9,7 +9,6 @@ Some Key Points About this Algorithm
 
 #include<bits/stdc++.h>
 using namespace std;
-
 typedef pair<int, int> pii; // Represents (node, weight) pair 
 typedef long long int ll; 
 #define INF INT_MAX 
@@ -19,6 +18,8 @@ struct Triple
 	int a, b, c; 
 	 
 	// Constructor
+	Triple() : a(0), b(0), c(0) {} // Default constructor
+
 	Triple(int a, int b, int c)
 	{
 		this->a = a; 

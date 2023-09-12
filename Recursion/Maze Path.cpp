@@ -27,6 +27,6 @@ int main()
     cin>>n;
     
     int i=1;
-    lexicoGraphicOrder(n, 0);
+    mazePath(0, 0, 5, 5, " ");
     return 0;
 }
