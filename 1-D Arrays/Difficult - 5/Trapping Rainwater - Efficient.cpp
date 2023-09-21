@@ -12,7 +12,7 @@ int main()
     for(int i=0; i<n; i++)
         cin>>v[i];
         
-    lmax[0]=v[0], rmax[n-1]=v[n-1];
+    lmax[0] = v[0], rmax[n-1] = v[n-1];
     
     for(int i=1; i<n; i++)
         lmax[i]=max(lmax[i-1], v[i]);

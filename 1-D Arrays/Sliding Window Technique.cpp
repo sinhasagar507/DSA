@@ -1,9 +1,9 @@
 /** Sliding Window Technique **/
 /** Add one and subtract one **/
-/** Maximum Contiguous Subarray Sum**/
-/** Implementation in O(n) time and O(1) auxiliary memory space**/
+/** Maximum Contiguous Subarray Sum **/
+/** Implementation in O(n) time and O(1) auxiliary memory space **/
 
-/** An extension of the implemented algorithm can be posed in the form of a question as - Given an unsorted array of non-negative integers. Find if there is a subarray with a given sum. Next Page**/
+/** An extension of the implemented algorithm can be posed in the form of a question as - Given an unsorted array of non-negative integers. Find if there is a subarray with a given sum. Next Page **/
 
 #include<bits/stdc++.h>
 using namespace std;

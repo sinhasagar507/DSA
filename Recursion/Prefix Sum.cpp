@@ -14,6 +14,13 @@ int getSum(int ps[], int l, int r){
     return ps[r]-ps[l-1];
 }
 
+
+/*
+Question: arr = [2, 3, 5, 4, 6, 1]
+getSum(0, 2) = 23 
+1*arr[l] + 2*arr[l+1] + 3*arr[l+2] + 4*arr[l+3] +...+ (r-l+1)*arr[r] = summation(from i=l to r): (i-l+1)(arr[i]) i AND (l-1) ko separate kro
+*/
+
 int main(){
     int arr[]={2, 8, 3, 9, 6, 5, 4};
     int n=7;

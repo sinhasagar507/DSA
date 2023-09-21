@@ -1,4 +1,6 @@
-/* Stock, buy and sell-a  */
+/* 
+Stock, buy and sell: Efficient solution O(n) 
+*/
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -12,18 +14,15 @@ int main()
     for(int i=0; i<n; i++)
         cin>>v[i];
         
-    int ans=0, initial=v[0]; 
+    int profit=0, initial=v[0]; 
     
     for(int i=1; i<n; i++)
     {
-        if(v[i]-initial>ans)
-            ans=v[i]-initial;
-            
-        if(initial>v[i])
-            initial=v[i];
+        if(price[i] > price[i-1])
+        	profit += (price[i] - price[i-1]); 
     }
         
-    cout<<ans<<endl;
+    cout<<profit<<endl;
     
     return 0;
 }
