@@ -1,4 +1,7 @@
-/* Cycle Sort */
+/* Cycle Sort 
+Refer this link: https://www.youtube.com/watch?v=JfinxytTYFQ
+Whenever numbers given from 1 to N, use Cyclic Sort 
+*/
 
 #include<bits/stdc++.h>
 using namespace std;

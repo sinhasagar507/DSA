@@ -48,9 +48,18 @@ Conversion Between Signed and Unsigned: It's relatively easy to convert between 
 Complement Operations: 2's complement has useful properties, such as the ability to negate a number by taking its 2's complement. This simplifies operations like negation and bitwise NOT.
 
 Overall, the 2's complement representation strikes a balance between simplicity, efficiency, and consistency in arithmetic operations. It is widely used in computer systems and digital hardware because it simplifies both the design and implementation of arithmetic operations, making them easier to perform and understand
+*/
 
-
-
-
-
+/*
+MAX value of N                       Time complexity
+   10^9                              O(logN) or Sqrt(N)
+   10^8                              O(N) Border case
+   10^7                              O(N) Might be accepted
+   10^6                              O(N) Perfect
+   10^5                              O(N * logN)
+   10^4                              O(N ^ 2)
+   10^2                              O(N ^ 3)
+   <= 160                            O(N ^ 4)
+   <= 18                             O(2N*N2) 
+   <= 10                             O(N!), O(2N)
 */

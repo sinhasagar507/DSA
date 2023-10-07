@@ -22,8 +22,8 @@ void maxHeapify(vector<int> &v, int n, int i)
 void heapSort(vector<int> &v, int n)
 {
 	// Build Heap 
-	for (int i=N/2-1; i>=0; i--)
-		heapify(arr, N, i);
+	for (int i=n/2-1; i>=0; i--)
+		maxHeapify(v, n, i);
 
 	// One by One extract element from heap 
 
