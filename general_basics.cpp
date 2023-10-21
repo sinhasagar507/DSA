@@ -2,6 +2,7 @@
 1. How the Dutch National Flag algorithm is applied to QuickSort?
 2. Sort around a given range
 3. Focus on algorithms - don't use the OOPs concept now
+4. When I write (for &auto element: container), it means I am referencing the container element and want to make changes to the container in-place.  
 
 DSA:
 1. Python Regex question - hackerrank - Round-2

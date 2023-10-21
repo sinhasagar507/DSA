@@ -45,7 +45,7 @@ void solve() Time Complexity: O(nm)
 		
 		for(int j = 0; j < n; j++)
 		{
-			if(v[i] == v[j]){
+			if(v[i] == v1[j]){
 				cout << v[i] << " "; 
 				break; 
 			}
@@ -77,6 +77,7 @@ void solve()
 			k++;  
 			continue;
 		}
+		
 		if(v[k] < v1[l]) 
 			k++;
 			
