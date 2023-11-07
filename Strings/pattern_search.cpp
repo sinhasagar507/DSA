@@ -1,5 +1,7 @@
 /*
-Pattern Search: 
+Pattern Search: Given a text txt[0..n-1] and a pattern pat[0..m-1], 
+write a function search(char pat[], char txt[]) that prints all occurrences of pat[] in txt[]. You may assume that n > m.
+
 			 
 */
 
@@ -29,7 +31,7 @@ queue<int> node_queue;
 void solve()
 {
 	// Do Something
-	char txt[] = "ABCABCDABCD"; 
+	char txt[] = "ABCABCDABCD"; // A character array 
 	char pat[] = "ABCD";
 	
 	int len1 = strlen(txt); // Returns the length of C string  
@@ -76,11 +78,14 @@ void solve()
 	/* Rabin Karp Algorithm: The time complexity of this algorithm here is: O((N-M+1)*M). It is used practically when then are multiple patterns to be searched in a text
 	void RBSearch(pat, text, M, N) // Time Complexity: O(N - M + 1)
 	{
+		// M is the length of pattern 
+		// N is the length of original string 
 		int h = 1; 
 		for(int i = 1; i <= M-1; i++)
 			h = (h*d)%q; // Here I am computing (d^m-1)%q
 			
-		int p = 0, h = 0; // Initializing hash function values for pattern and text 
+		int p = 0; // Initializing hash function for the pattern 
+		int h = 0; // Initializing hash function for the text 
 		
 		for(int i = 0; i < M; i++)
 		{

@@ -30,9 +30,9 @@ bool f = false;
 /* Recursive Approach 
 Time Complexity: theta(n)
 Space Complexity: theta(n)
-
 */ 
-int jos(int n, int k)
+
+int jos(int n, int k) // Recurrence Relation: T(n) = T(n-1) + c 
 {
 	if(n == 1)
 		return 0; 

@@ -1,3 +1,7 @@
+/* 
+Problem Statement: Given a string s1 and a string s2, write a snippet to 
+                   say whether s2 is a rotation of s1? 
+*/
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
@@ -21,7 +25,14 @@ int dist[N+1];
 int source[N+1];
 queue<int> node_queue;
 
-bool rotation_pattern_check(string s1, string s2)
+
+
+/*
+Time Complexity of this approach: O(n^2)
+
+
+*/
+bool rotation_pattern_check(string s1, string s2) 
 {
 	int n1 = s1.length(); 
 	int n2 = s2.length(); 
@@ -52,6 +63,8 @@ bool rotation_pattern_check(string s1, string s2)
 	
 	return false; 
 }
+
+
 
 void solve()
 {   
