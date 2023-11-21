@@ -1,0 +1,28 @@
+/*
+   Problem Statement - The popular Tower of Hanoi problem 
+   
+   Applications - The recursive way of thought 
+*/
+
+#include <iostream>
+using namespace std;
+
+void ToH(int n, char A, char B, char C) // Time Complexity: O(2^n)
+{ 
+    if (n == 1) 
+    { 
+        cout<<"Move 1 from " <<  A << " to " << C << endl; 
+        return; 
+    } 
+    ToH(n-1, A, C, B); 
+    cout<<"Move " << n << " from " <<  A << " to " << C << endl; 
+    ToH(n-1, B, A, C); 
+}
+	
+int main() {
+	
+	int n = 2; 
+    
+    ToH(n, 'A', 'B', 'C'); 
+	return 0;
+}

@@ -75,7 +75,6 @@ void solveNQueen(vector<vector<int>> board, int row, int col, int tq, int qpsf, 
     { 
         row++; 
         col=0; 
-        
     }
     
     if(row==board[0].size()) // All rows have been traversed. We can't place any more queens 
@@ -91,7 +90,7 @@ void solveNQueen(vector<vector<int>> board, int row, int col, int tq, int qpsf, 
     
     // Recur. Try placing other queens
     solveNQueen(board, row, col+1, tq, qpsf+1, ans+"["+to_string(row)+", "+to_string(col)+"]"); 
-    
+    	
     // Undo 
     board[row][col] = 0;
     } 
@@ -102,7 +101,7 @@ void solveNQueen(vector<vector<int>> board, int row, int col, int tq, int qpsf, 
 
 int main()
 {
-    int m, n; // for specifying the number of rows and columns 
+    int m; // Specify the size of the m*m chessboard 
     cin >> m >> n; 
     vector<vector<int>> board(m, vector<int>(n, 0));
     solveNQueen(board, 0, 0, 4, 0, "");

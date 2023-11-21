@@ -44,7 +44,7 @@ Ovrall time complexity of both algorithms is thetaa(n), where "n" is the total n
 in a binary tree. 
 */
 
-void printLevel(Node *root) 
+void printLevel(Node *root) // Time Complexity of this algorithm is O(n), where O
 {   
 	// Do Something 
 	if(root == NULL)

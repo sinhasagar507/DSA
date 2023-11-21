@@ -21,30 +21,18 @@ int dist[N+1];
 int source[N+1];
 queue<int> node_queue;
 
-struct TreeNode
-{
-	int val; 
-	TreeNode *left, *right; 
-	TreeNode(): val(0), left(nullptr), right(nullptr) {}
-	TreeNode(int x): val(x), left(nullptr), right(nullptr) {}
-	TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-}; 
+struct TreeNode { 
+	int data; 
+	TreeNode *lchild, *rchild; 
+	TreeNode(int x) 
+	{ 
+		data = x; 
+		lchild = rchild = NULL;
+	} 
+};
 
-// Converting an array to a level-wise tree
-// Recursive code, always practice using a recursive call stack. Time Complexity is O(n) and space complexity is O(h)
-TreeNode *treeConstruct(vector<int> v, int n, int index, TreeNode *root) 
-{ 
-	
-	if(index<n)
-	{
-		TreeNode *temp = new TreeNode(v[index]);
-		root = 	temp;
-		root->lchild = treeConstruct(v, n, 2*index+1, root->lchild);
-		root->rchild = treeConstruct(v, n, 2*index+2, root->rchild);
-	}
-	
-	return root;
-} 
+
+
 int findHeightLeft(TreeNode* node)
 {
 	int height = 0; 
@@ -86,14 +74,13 @@ int countNodes(TreeNode *root)
 void solve()
 {   
 	// Do Something
-	 TreeNode *root = new TreeNode(10); 
-	 root->left = new TreeNode(20); 
-	 root->right = new TreeNode(30); 
-	 root->left->left = new TreeNode(40); 
-	 root->left->right = new TreeNode(50); 
-	 root->right->left = new TreeNode(60);
-	 root->right->right = new TreeNode(70);
-	 cout << countNodes(root) << endl; 
+	int n, target, k; cin >> n >> target >> k; 
+	vector<int> v(n); 
+	 
+	for(int i = 0; i < n; i++)
+		cin >> v[i]; 
+		
+	distanceK(root, target, k); 
 }
  
 int main()
@@ -104,5 +91,7 @@ int main()
 	int t;
 	cin >> t;
  
+	while(t--){
 	solve(); 
+	}
 }

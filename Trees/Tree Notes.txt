@@ -14,4 +14,3 @@ What is required:
 Ques. Constructing a binary tree from an array 
 Ques. Deletion from a binary tree 
 Ques. Constructing hash functions from an array using unordered set
-Ques. 

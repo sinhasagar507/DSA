@@ -1,3 +1,7 @@
+/* 
+	Problem Statement: 
+
+*/
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
@@ -21,9 +25,55 @@ int dist[N+1];
 int source[N+1];
 queue<int> node_queue;
 
+struct TreeNode { 
+	int data; 
+	TreeNode *lchild, *rchild; 
+	TreeNode(int x) 
+	{ 
+		data = x; 
+		lchild = rchild = NULL;
+	} 
+}; 
+
+
+void traversal(Node *root)
+{
+	map<int, vector<int>> mp; 
+	queue<pair,<TreeNode*, int>> q; 
+	q.push({root, 0}); 
+	
+	while(!q.empty())
+	{
+		auto p = q.front(); 
+		Node *curr = p.first; 
+		int hd = p.second; 
+		mp[hd].push_back(curr->data); 
+		q.pop(); 
+		if(curr->left != NULL)
+			q.push({curr->left, hd-1}); 
+		if(curr->right != NULL)
+			q.push({curr->right, hd+1});  
+	}
+	
+	// Print the map contents line by line 
+	for(auto it: mp)
+	{
+		vector<int> v = it.second; 
+		for(int x: v)
+			cout << x << " "; 
+		cout << endl; 
+	}
+}
+
 void solve()
 {   
 	// Do Something 
+	TreeNode* root = new Node(1); 
+	root->left = new Node(2); 
+	root->right = new Node(3); 
+	root->left->left = new Node(4); 
+	root->left->right = new Node(5); 
+	traversal(root); 
 }
  
 int main()

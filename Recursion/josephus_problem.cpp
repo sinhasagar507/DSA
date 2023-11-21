@@ -32,7 +32,7 @@ Time Complexity: theta(n)
 Space Complexity: theta(n)
 */ 
 
-int jos(int n, int k) // Recurrence Relation: T(n) = T(n-1) + c 
+int jos(int n, int k) // Recurrence Relation: T(n) = T(n-1) + c. In the next iteration, the nos have to be reinitialized again starting from 1, 2, 3 and so on...
 {
 	if(n == 1)
 		return 0; 

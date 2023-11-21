@@ -1,4 +1,6 @@
-/* Program to check children sum property */
+/* 
+	Problem Statement: 
+*/
 #include <bits/stdc++.h>
 using namespace std;
  
@@ -13,6 +15,7 @@ struct node
  
 /* returns 1 if children sum property holds
 for the given node and both of its children*/
+// Time Complexity of this algorithm is O(n), whereas the space complexity is O(logn)
 int isSumProperty(struct node* node)
 {
     /* left_data is left child data and
