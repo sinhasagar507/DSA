@@ -16,19 +16,17 @@ struct TreeNode {
 }; 
 
 // Converting an array to a level-wise tree data structure 
-TreeNode *treeConstruct(vector<int> v, int n, int index, TreeNode *root) 
-{ 
-	
-	if(index<n)
-	{
-		TreeNode *temp = new TreeNode(v[index]);
-		root = temp;
-		root->lchild = treeConstruct(v, n, 2*index+1, root->lchild);
-		root->rchild = treeConstruct(v, n, 2*index+2, root->rchild);
-	}
-	
-	return root;
-} 
+TreeNode* treeConstruct(vector<int>& v, int n, int index) {
+    if (index < n) 
+    {
+        TreeNode* root = new TreeNode(v[index]);
+        root->lchild = treeConstruct(v, n, 2 * index + 1);
+        root->rchild = treeConstruct(v, n, 2 * index + 2);
+        return root;
+    }
+    
+    return NULL;
+}
 
 
 // Print Inorder Tree Traversal 

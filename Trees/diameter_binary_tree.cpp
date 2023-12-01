@@ -2,8 +2,16 @@
 Problem Statement:	The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two end nodes
 
 Applications of getting diameter of binary tree
--  
-
+- Network Routing Optimization: Helps optimize routing algorithms in computer networks.
+- Performance Analysis: Assists in analyzing the efficiency of binary tree-based data structures.
+- Balancing Binary Trees: Used in balancing structures like AVL or Red-Black trees for optimal operations.
+- Graph Algorithms: Provides insights for graph traversal algorithms and connected components.
+- Algorithm Design: Crucial parameter in algorithms for tree-related problems and optimizations.
+- Social Network Analysis: Measures maximum distance between individuals in social networks.
+- Algorithmic Competitions: Critical metric or constraint in tree-related algorithmic challenges.
+- Parallel Computing: Assists in designing efficient communication protocols and algorithms.
+- Robotics and Sensor Networks: Aids in movement strategies for robots or sensor nodes.
+- Tree Visualization: Contributes to understanding the overall structure of trees in visualizations.
 */ 
 
 #include<bits/stdc++.h>
@@ -31,24 +39,26 @@ queue<int> node_queue;
 
 struct TreeNode { 
 	int data; 
-	TreeNode *lchild, *rchild; 
+	TreeNode *left, *right; 
 	TreeNode(int x) 
 	{ 
 		data = x; 
-		lchild = rchild = NULL;
+		left = right = NULL;
 	} 
 };
 
-// Diameter of a binary tree 
+//  Diameter of a binary tree 
 /// A naive solution would be to find lheight and rheight and just add 1. As presented here...
-int height(TreeNode* node, diameter)
+//  Time Complexity of this algorithm: O(n)
+//  Space Complexity: O(h). However, if the tree is skewed, then the SC is O(n)
+int height(TreeNode* node, int &diameter)
 {
 	if(node == NULL)
 		return 0; 
 		
-	int lh = height(node->left); 
-	int rh = height(node->right); 
-	diameter = max(diameter, lh+rh+1); 
+	int lh = height(node->left, diameter); 
+	int rh = height(node->right, diameter); 
+	diameter = max(diameter, lh+rh); 
 	return 1 + max(lh, rh); 
 }
 
@@ -64,8 +74,9 @@ void solve()
 	root->left->right->left = new TreeNode(6); 
 	root->right = new TreeNode(3); 
 	root->right->right = new TreeNode(7); 
-	
-	cout << height(node, 0) << "\n"; 
+	int diameter = 0; 
+	int h = height(root, diameter); 
+	cout << h << " " << diameter << "\n"; 
 
 } 
  
