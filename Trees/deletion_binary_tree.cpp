@@ -139,7 +139,7 @@ void solve()
 	TreeNode* root = treeConstruct(v, n, 0, root);
 	deletion(root, del_key); 
 	
-	// Print the tree inorder 
+	// Print the inorder traversal of the given tree  
 }
  
 int main()
