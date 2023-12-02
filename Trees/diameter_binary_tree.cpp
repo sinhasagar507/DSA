@@ -77,9 +77,8 @@ void solve()
 	int diameter = 0; 
 	int h = height(root, diameter); 
 	cout << h << " " << diameter << "\n"; 
-
 } 
- 
+
 int main()
 {
     ios_base::sync_with_stdio(false);
