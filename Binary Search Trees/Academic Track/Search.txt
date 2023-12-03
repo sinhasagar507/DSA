@@ -1,3 +1,87 @@
 1. Worst Case TC for Search - O(h). Usually the average TC is O(nlogn)
 2. For a normal BST, search can go upto O(n). This is not the case for a self-balancing binary tree. 
 3. Insertion: root->left or root->right is meant for insertion 
+
+// Delete a node from a binary search tree 
+TreeNode* deleteNode(TreeNode* root, int key, TreeNode* prev)
+{
+	if(root == nullptr)
+		return nullptr; 
+
+	else if(root->data = key) 
+	{
+		if(root->left == nullptr and root->right == nullptr) 
+		{
+		    delete root;   // free up the memory space of the root node 
+		    root = nullptr; // Assigning it to null to avoid the issue of dangling pointers 
+		}
+		
+		else
+		{
+		   TreeNode* newRoot; 
+		   if(root->left != nullptr)
+		   	newRoot = root->left;
+			if(prev != nullptr)
+				prev->left = newRoot; 
+			if(root->left->left != nullptr) 
+				newRoot->left = root->left->left; 
+			if(root->right != nullptr and root->right->right != nullptr) 
+			 	newRoot->right = root->right->right; 
+
+		   if(root->right != nullptr)
+			if(newRoot == nullptr)  
+				newRoot = root->right;
+			if(root->right->right != nullptr) 
+				newRoot->right = root->right->right;  
+
+		   root->left = nullptr;
+		   root->right = nullptr; 
+		   delete root; 
+		   root = null;
+		}
+	}
+
+	else if(root->data < key) 
+		deleteNode(root->right, key, root); 
+	
+	else if(root->data > key) 
+		deleteNode(root->left, key, root); 
+
+	else
+	   // The condition where none of the nodes contan the data 
+
+}
+		
+	// Check if the key corresponds to the root data itself 
+	
+	if(key < root->data)
+	{
+		if(key != root->left->data)
+		{
+			deleteNode(root->left, key); 
+		}
+		
+		else
+		{
+			TreeNode *lchild = root->left->left; 
+			TreeNode *rchild = root->left->right; 
+			root->left = rchild;
+			rchild->left = lchild; 
+			
+			// Now even check for rchild ka null as well  
+		}
+	}
+	
+	else if(key > root->data)
+	{
+		if(key != root->right->data)
+		{
+			deleteNode(root->right, key); 
+		}
+		
+		else 
+		{
+			deleteNode()
+		}
+	}
+	
