@@ -84,4 +84,26 @@ TreeNode* deleteNode(TreeNode* root, int key, TreeNode* prev)
 			deleteNode()
 		}
 	}
+
+- 2 questions ke baad bhi fse hue ho, review your lecture (Naa main sbb krunga...gaand mrvaunga, 
+- Provide 3 edge cases to every problem you do 
+- See to the issue of time management (when to stay down) and low...(upr hi manage ho toh better??? hai
+- From morning till evening..., naha dhoke yhi baitho
+	- Also manage your anxiety levels by sitting down and noting the levels...
+- Different GitHub badges 
+- Refer this link daily: https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide
+- Why Doc2vec usually needs more training than Word2Vec? 
+- Just data ghusake rkhdo...Finding suitable OR not is none of your concern...
+- Not current project ka deployment, just continuous improvement and integration
+- Ask this question: What is the ideal length of comments I should be using as reference tweets?
+- 1 question bhi ho, krdo...Don't leave it as it is...Persistence and consistency...
+	- My mistake
+		- Nai hota hai, (log bolte hain ek cheez dhang se krle...dekh sbb dhang se nai ho paayega...but jitna ho skta hai vo krde...) 
+	- Dekho 75% tkk pahunche mera current level...questions thode bahut vahan jaake bhi ho jaaye toh chlega...don't beat yourselves up on it...
+	- Main jo ideal routine mein give baithta huin that is "normal Sagar", not the "beastly Sagar" 	- Data Extraction from Amazon Global, Amazon US, Amazon India, Amazon Prime and Amazon Prime India??? 
+	- Which phones work in US as well as India?
+		- See to it 
+	- Explore CPEditor later on...
+
+
 	
