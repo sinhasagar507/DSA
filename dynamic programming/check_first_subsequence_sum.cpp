@@ -21,10 +21,38 @@ int dist[N+1];
 int source[N+1];
 queue<int> node_queue;
 
+bool find_subsequence(vector<int> &v, int target, int curr_sum, int index, vector<int> &result)
+{
+	if(curr_sum == target)
+	{
+		cout << "Susbequence found: " << "\U0001F600\n"; 
+		return true; 
+	}
+	
+	if(index == v.size() or curr_sum > target) 
+		return false; // Terminate recursion 
+		
+	// Include the current element in the subsequence 
+	result.push_back(v[index]); 
+	if (find_subsequence(v, target, curr_sum+v[index], index+1, result))
+		return true; // Terminate 
+	
+	// Exclude the current element from the subsequence 
+	result.pop_back(); 
+	return find_subsequence(v, target, curr_sum, index+1, result); 
+}
+
 void solve()
 {   
-	// Do Something 
-	
+	 // Do Something
+	 vector<int> v = {3, 4, 7, 4, 6};
+	 vector<int> result;  
+	 
+	 if(find_subsequence(v, 12, 0, 0, result))
+	 	cout << "Oh Yeah!!!" << "\n"; 
+	 	
+	 else 
+	 	cout << "Nope, subsequence not found " << "\U0001F61E\n";
 }
  
 int main()

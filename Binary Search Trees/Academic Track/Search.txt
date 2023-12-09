@@ -104,6 +104,143 @@ TreeNode* deleteNode(TreeNode* root, int key, TreeNode* prev)
 	- Which phones work in US as well as India?
 		- See to it 
 	- Explore CPEditor later on...
+	- For now, the go to approach in recursion vs iteration is??? 
+		- Consider both of them 
+		- Agr koi ek se naa ho...taal thoko and proceed
+	- (2*idx+1) AND (2*idx+2) vala cheez hobe toh how that procedure works..., see to it
 
 
+//{ Driver Code Starts
+// Initial Template for C
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
+#include <limits.h>
+
+#define N 1000000
+
+struct Node {
+    int data;
+    struct Node *right;
+    struct Node *left;
+};
+
+struct Node *createNewNode(int value) {
+    struct Node *temp = (struct Node *)malloc(sizeof(struct Node *));
+    temp->data = value;
+    temp->left = temp->right = NULL;
+    return temp;
+}
+
+struct Node *insert(struct Node *tree, int val) {
+
+    if (tree == NULL) {
+        return createNewNode(val);
+    }
+
+    if (val < tree->data) {
+        tree->left = insert(tree->left, val);
+    } else if (val > tree->data) {
+        tree->right = insert(tree->right, val);
+    }
+
+    return tree;
+}
+
+struct Node *convert_str_to_num(char str[]) {
+    char *token = strtok(str, " ");
+
+    struct Node *root = NULL;
+
+    char c[2] = {'N'};
+    while (token != NULL) {
+        if (strcmp(c, token) != 0) {
+            int num = atoi(token);
+            root = insert(root, num);
+        }
+        token = strtok(NULL, " ");
+    }
+
+    return root;
+}
+
+void inorder(struct Node *root) {
+    if (root == NULL) return;
+
+    inorder(root->left);
+    printf("%d ", root->data);
+    inorder(root->right);
+}
+
+
+// } Driver Code Ends
+// User function Template for C
+
+
+int Floor(struct Node* root, int key) 
+{
+    // your code here
+    int floor_val = -1;
+    
+    struct Node* dummy = root; 
+    
+    // Stqrt the loop 
+    while(dummy != NULL)
+    {
+        if(dummy->data == key)
+        {
+            floor_val = key;
+            break; 
+        }
+            
+        else if(dummy->data > key)
+            dummy = dummy->left; 
+            
+        else if(dummy->data < key)
+        {
+            floor_val = key; 
+            dummy = root->right; 
+        }
+    }
+    
+    return floor_val; 
+}
+
+//{ Driver Code Starts.
+
+int main() {
+    int t;
+    scanf("%d", &t);
+
+    while (t--) {
+        while ((getchar()) != '\n')
+            ;
+        char str[N];
+        scanf("%[^\n]s", str);
+
+        int x;
+        scanf("%d", &x);
+
+        struct Node *root = NULL;
+
+        root = convert_str_to_num(str);
+
+        int ans = Floor(root, x);
+
+        printf("%d\n", ans);
+    }
+
+    return 0;
+}
+
+// } Driver Code Ends
+
+- I don't have the time to code AVL tree and Red-Black tree...So, I simply move forward after coding these 2...
+- Submit soln to online platforms, be it GFG or LeetCode 
+- Computing the complexity of recursive solutions 
+- If I learn less things on a particular day - maxed out to 2, everything works in my favor...explore a particular thing in more detail 
+- What is coreference resolution? 
+	
 	

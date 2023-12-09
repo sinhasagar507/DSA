@@ -21,10 +21,42 @@ int dist[N+1];
 int source[N+1];
 queue<int> node_queue;
 
+// Memoization mein bhi bottom-up progression is possible 
+int max_sum_non_adjacent(vector<int> &v, vector<int> &dp, int n, int idx)
+{
+	// Base Case 1 
+	if(idx == n-1)
+		return v[n-1]; 
+		
+	// Base Case 2 
+	else if (idx >= n)
+		return 0; 
+		
+	// Base Case 3 
+	if(dp[idx] != -1)
+		return dp[idx]; 
+		
+	// Recursive Intuition 
+	int noSum = 0 + max_sum_non_adjacent(v, dp, n, idx+1); 
+	int sum = v[idx] + max_sum_non_adjacent(v, dp, n, idx+2); 
+	
+	// Self Work 
+	dp[idx] = max(noSum, sum); 
+	
+	return dp[idx]; 
+}
+
+
+
 void solve()
 {   
 	// Do Something 
+	vector<int> v = {2, 1, 4, 9}; 
+	int n = v.size();
+	vector<int> dp(n, -1);  
 	
+	cout << max_sum_non_adjacent(v, dp, n, 0) << "\n"; 
+
 }
  
 int main()

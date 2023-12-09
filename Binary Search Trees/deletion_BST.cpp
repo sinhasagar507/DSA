@@ -101,7 +101,8 @@ struct Node* deleteNode(Node* root, int key)
 }
 
 // Function to Build Tree
-Node* buildTree(string str) {
+Node* buildTree(string str) 
+{
     // Corner Case
     if (str.length() == 0 || str[0] == 'N') 
     	return NULL;
