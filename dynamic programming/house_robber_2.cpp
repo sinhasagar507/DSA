@@ -33,37 +33,14 @@ int dist[N+1];
 int source[N+1];
 queue<int> node_queue;
 
-
-/* 
-// Recursive Code. Time Complexity: O(2^n). Space Complexity: O(n)
-int max_sum_non_adjacent()
+int max_sum_non_adjacent(vector<int> &dest, vector<int> &dp, int n, int idx)
 {
 	// Base Case 1 
-	if(idx == n-1)
-		return v[n-1]; 
+	if(idx == 0)
+		return dest[0]; 
 		
-	// Base Case 2 
-	else if (idx >= n)
-		return 0; 
-		
-	// Recursive Intuition 
-	int noSum = 0 + max_sum_non_adjacent(v, dp, n, idx+1); 
-	int sum = v[idx] + max_sum_non_adjacent(v, dp, n, idx+2); 
-	
-	return max(noSum, sum); 
-}
-*/
-
-// Memoization mein bhi bottom-up progression is possible
-// Time Complexity: O(n). Space Complexity: O(n)
-int max_sum_non_adjacent(vector<int> &v, vector<int> &dp, int n, int idx)
-{
-	// Base Case 1 
-	if(idx == n-1)
-		return v[n-1]; 
-		
-	// Base Case 2 
-	else if (idx >= n)
+	//Base Case 2 
+	if(idx < 0)
 		return 0; 
 		
 	// Base Case 3 
@@ -71,8 +48,8 @@ int max_sum_non_adjacent(vector<int> &v, vector<int> &dp, int n, int idx)
 		return dp[idx]; 
 		
 	// Recursive Intuition 
-	int noSum = 0 + max_sum_non_adjacent(v, dp, n, idx+1); 
-	int sum = v[idx] + max_sum_non_adjacent(v, dp, n, idx+2); 
+	int noSum = 0 + max_sum_non_adjacent(dest, dp, n, idx-1); 
+	int sum = dest[idx] + max_sum_non_adjacent(dest, dp, n, idx-2); 
 	
 	// Self Work 
 	dp[idx] = max(noSum, sum); 
@@ -121,12 +98,28 @@ int max_sum_non_adjacent(vector<int> &v, vector<int> &dp, int n, int idx)
 void solve()
 {   
 	// Do Something 
-	vector<int> v = {2, 1, 4, 9}; 
-	int n = v.size();
-	vector<int> dp(n, -1);  
+	int n; 
+	cin >> n; 
+	vector<int> v(n); 
 	
-	cout << max_sum_non_adjacent(v, dp, n, 0) << "\n"; 
-
+	// Copy elements 
+	
+	for(int i = 0; i < n; i++)
+		cin >> v[i]; 
+		
+	vector<int> dest1(n-1), dest2(n-1), dp1(n-1, -1), dp2(n-1, -1); 
+	
+	for(int i = 0; i < n-1; i++)
+		dest1[i] = v[i+1]; 
+		
+	for(int i = 0; i < n-1; i++)
+		dest2[i] = v[i];  
+		
+	int ans1 = max_sum_non_adjacent(dest1, dp1, n-1, n-2); 
+	int ans2 = max_sum_non_adjacent(dest2, dp2, n-1, n-2); 
+	
+	int res = max(ans1, ans2); 
+	cout << res << "\n"; 
 }
  
 int main()

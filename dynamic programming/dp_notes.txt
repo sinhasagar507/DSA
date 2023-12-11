@@ -1,0 +1,11 @@
+9th December 2023 
+- When converting memoization code to tabulation format, always understand what dp array stands for 
+- For instance, in the classic problem of ? 
+- The classic git visualization?
+	- gitk 
+- Applications of DP 
+	- Bellman Ford: find shortest path 
+	- Floyd Warshall: find longest path between two sets of vertices 
+	- Diff Utility: LCS - Longest Common Subsequence 
+	- Search Closed Words: Edit Distance 
+	- Resource Allocation: 0-1 Knapsack 
