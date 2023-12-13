@@ -237,8 +237,8 @@ int main() {
 
 // } Driver Code Ends
 
-- I don't have the time to code AVL tree and Red-Black tree...So, I simply move forward after coding these 2...
-- Submit soln to online platforms, be it GFG or LeetCode 
+- Coding AVL tree and Red-Black tree...So, I simply move forward after coding these 2...
+- Submit solution to online platforms, be it GFG or LeetCode 
 - Computing the complexity of recursive solutions 
 - If I learn less things on a particular day - maxed out to 2, everything works in my favor...explore a particular thing in more detail 
 - What is coreference resolution? 
