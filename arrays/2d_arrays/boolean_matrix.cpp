@@ -1,6 +1,5 @@
 /*
-
-
+Pro
 */
 
 class Solution
@@ -23,7 +22,7 @@ class Solution
 		    		if(row.find(i) != row.end())
                     	row.insert(i);
 
-		    		if(col.find(i) != col.end())
+		    		if(col.find(j) != col.end())
                     	col.insert(j);
                 }
             }

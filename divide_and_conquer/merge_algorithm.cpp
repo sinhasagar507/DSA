@@ -4,7 +4,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// O(n1+n2) is the time complexity of the below algorithm. Space Complexity: O(n1+n2)
 vector<int> merge(vector<int> v, int n, int low, int mid, int high)
 {
     int n1=mid-low+1, n2=high-mid;

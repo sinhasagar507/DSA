@@ -19,7 +19,7 @@ int main()
 {   
     cin>>m>>n>>x;
     
-xv(m+1 , vector<int> (n+1));
+    vector<vector<int>> v(m+1, vector<int>(n+1));
     int i=1, j=n;
     bool flg=false;
     
