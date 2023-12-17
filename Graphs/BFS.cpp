@@ -1,4 +1,37 @@
-// The current algorithm will work only for undirected graphs
+/*
+Problem Statement: Breadth First Search (BFS) for a graph 
+
+Corner Cases: 
+1. Disconnected Graphs: Two disconnected components: {0, 1, 2} and {3, 4}
+2. Single Node or Self Loop: graph[0] = {0};
+3. Empty Graph: No Graph 
+4. Directed Acylic Graph
+	    graph[0] = {1, 2};
+    	graph[1] = {3};
+    	graph[2] = {4};
+    	graph[3] = {5};
+    	graph[4] = {5};
+    	graph[5] = {};
+5. Cyclic Graph with a Cycle 
+		// Cyclic graph with a cycle: 0 -> 1 -> 2 -> 0
+       graph[0] = {1};
+       graph[1] = {2};
+       graph[2] = {0};
+       graph[3] = {}; 
+       
+       
+Applications 
+1. Graph Traversal
+	- Shortest Path and Pathfinding: Can determine the shortest path between two nodes in an unweighted graph
+	  Used in GPS systems, route planning and navigation maps
+	- Web Crawling: Used by search engines to index web pages  
+2. Network Analysis 
+	- Analyzing social networks, finding connections, or determining degrees of separation between individuals 
+	- Network Routing and BroadCast: In CNs, BFS aids in broadcasting messages or routing packets efficiently 
+3. Puzzles and Games 
+	- Maze Solving 
+	- Game AI 
+*/
 
 #include <bits/stdc++.h> 
 using namespace std; 

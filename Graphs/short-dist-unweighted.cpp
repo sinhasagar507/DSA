@@ -1,3 +1,22 @@
+/*
+Problem Statement: Shortest distances of vertices from a given node to all other nodes 
+
+Advantages of BFS for this algorithm: 
+1. Simplicity and efficiency: BFS is straightforward to implement and understand 
+2. Unweighted Graph Approximation: When edge weights are close or equivalent across the graph, 
+								   BFS might approximate the shortest path approximately well 
+3. Space Complexity: BFS usually has lower time complexity as compared to other algorithms, so its good enough 
+
+
+Disadvantages: 
+1. Can't be used for shortest path in weighted graphs. Reasons being node by node exploration without considering varying edge weights. 
+2. Optimality Guaranetee: BFS doesn't guarantee the optimal shortest path in weighted graphs because it might select paths with more edges
+						  but lower cumulative weights, which isn't necesarrily the shortest path based on weight 
+3. Failure to Consider Weight Differences: In weighted graphs, edges may have different weights, indicating different costs or distances between 
+										   nodes. BFS does not account for these weight differences.  
+4. Routing Algorihms: BFS aids in finding the shortest path 
+*/
+
 #include<bits/stdc++.h> 
 using namespace std; 
 

@@ -1,4 +1,8 @@
+/*
+Problem Statement: Replace O's with X's
 
+
+*/
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -22,6 +26,32 @@ bool visited[N+1];
 int dist[N+1];
 int source[N+1];
 queue<int> node_queue;
+
+/*
+Observations: 
+1. A set of X's connected to a boundary "O" can't be converted 
+
+
+*/
+
+void dfs(int row, int col, vector<vector<int>> &vis, vector<vector<char>> &mat, int delrow[], int delcol[])
+{
+	vis[row][col] = 1;
+	int n = mat.size(); 
+	int m = mat[0].size(); 
+		
+	// Check for top, right, bottom, left 
+	for(int i = 0l i < 4; i++)
+	{
+		int nrow = row + delrow[i]; 
+		int ncol = col + delcol[i]; 
+		
+		if(nrow >= 0 and nrow < n and ncol >=0 and ncol < m and mat[row][col] = "O")
+		
+		
+		
+	}
+}
 
 void solve()
 {   
