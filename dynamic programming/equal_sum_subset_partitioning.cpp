@@ -47,19 +47,51 @@ bool f(vector<int>& v, unordered_set<int>& us, int n, int i, int sum)
 
 // The following code checks for substring sum 
 // Check why this code ain't working 
-bool f(vector<int> &v, int n, int i, int sum1, int sum2)
-{
-	if(i == n-1)
-		return (sum1 == sum2); // Check if both sums are equal 
+// bool f(vector<int> &v, int n, int i, int sum1, int sum2)
+// {
+	// if(i == n-1)
+		// return (sum1 == sum2); // Check if both sums are equal 
 		
 	// Recursive Intuition 
 	// Two Options: include v[i] in the first subset or the second subset 
-	bool subset1 = f(v, n, i+1, sum1+v[i], sum2); 
-	bool subset2 = f(v, n, i+1, sum1, sum2+v[i]); 
+	// bool subset1 = f(v, n, i+1, sum1+v[i], sum2); 
+	// bool subset2 = f(v, n, i+1, sum1, sum2+v[i]); 
 	
 	// Return true if any of the recursive calls finds equal partitioning 
-	return (subset1 or subset2); 
+	// return (subset1 or subset2); 
+// }
+
+
+// Check with 
+// Function to check if it's possible to partition the array into two subsets with equal sum
+/* Tabulation + Memoization 
+bool subsetSumUtil(int ind, int target, vector<int>& v, vector<vector<int>>& dp) {
+    // Base case: If the target sum is 0, we found a valid partition
+    if (target == 0)
+        return true;
+
+    // Base case: If we have considered all elements and the target is still not 0, return false
+    if (ind == 0)
+        return v[0] == target;
+
+    // If the result for this state is already calculated, return it
+    if (dp[ind][target] != -1)
+        return dp[ind][target];
+        
+        
+    // Recursive Cases 
+    // Exclude the current element 
+    bool notTaken = subsetSumUtil(ind-1, target, v, dp); 
+    
+    // Include the current element if it doesn't exceed the target 
+    bool taken = false; 
+    if (v[ind] <= target)
+    	taken = subsetSumUtil(ind - 1, target - v[ind], v, dp); 
+    	
+    // Store the result in the DP table and return 
+    return dp[ind][target] = notTaken or taken; 
 }
+*/
 
 // Check why th
 bool f(vector<int>& v, int n, int k)

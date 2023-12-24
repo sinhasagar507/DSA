@@ -43,7 +43,7 @@ bool compareItems(const Item &a, const Item &b)
 // Main greedy function to solve Knapsack problem 
 double fractionalKnapsack(int W, vector<Item> &v1) // Max Time Complexity: O(nlogn)
 {
-	// Sorting items based on the ratio of value to widget 
+	// Sorting items based on the ratio of value to weight 
 	sort(v1.begin(), v1.end(), compareItems); 
 	
 	// Result (value in the Knapsack)
