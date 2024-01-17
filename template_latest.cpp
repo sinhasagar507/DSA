@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
+typedef pair<int, int> pii; // Represents (node, weight) pair 
  
 #define N2 100000
 const int N = 2e5 + 5;

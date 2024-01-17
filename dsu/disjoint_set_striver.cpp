@@ -70,6 +70,7 @@ class DisjointSet {
 		}
 		
 		// Union operation based on rank to optimize the merging of data 
+		// Kisi ek tree ko large banana hai baaki se mujhe koi lena dena nai 
 		void unionByRank(int u, int v)
 		{
 			int ulp_u = findUPar(u); 
