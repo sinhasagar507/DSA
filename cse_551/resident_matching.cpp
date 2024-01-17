@@ -1,10 +1,3 @@
-/*
-Problem Statement: // Huffman Coding
-1. It is a variable length lossless decompressing technique
-2. It is a greedy algorithm. The most frequent algorithm is going to have the smallest code and vice versa. 
-3. No code should be a prefix of another code. Can't decode in such a scenario. 
-*/
-
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long int ll;
@@ -12,7 +5,6 @@ typedef long long int ll;
 #define N2 100000
 const int N = 2e5 + 5;
 const ll N1 = 3 * 1e6;
-const int CHAR = 256; 
  
 template <class T>
 	ll giveNcR(ll n, ll r){ll p = 1, k = 1; if(n-r < r) r = n - r; if(r != 0){while(r) {p *=n; k *=r; ll m = __gcd(p, k); p /= m; k /= m; n--; r--;}} else p = 1; 
@@ -29,15 +21,21 @@ int dist[N+1];
 int source[N+1];
 queue<int> node_queue;
 
+struct Hospital
+{
+	// A hospital would have a list of preferences 
+	// A hospital would have a 
+}
 
-// Returns the order of jobs to maximize the profit 
 
-
-void solve() 
+void solve()
 {   
-	// Do Something
+	// Do Something 
+	int n, m; 
+	cin >> n >> m; 
 	
-
+	
+	
 }
  
 int main()

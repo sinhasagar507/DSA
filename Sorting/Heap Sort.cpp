@@ -26,7 +26,6 @@ void heapSort(vector<int> &v, int n)
 		maxHeapify(v, n, i);
 
 	// One by One extract element from heap 
-
 	for(int i=n-1; i>=0; i--)
 	{
 		swap(v[0], v[i]);

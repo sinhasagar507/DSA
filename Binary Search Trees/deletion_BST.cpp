@@ -40,7 +40,7 @@ Node* findLastRight(Node* root)
 Node* helper(Node* root)
 {
 	if(root->left == NULL) 
-		return root->right; // If there exists a root node		return root->right; 
+		return root->right; // If there exists a root node return root->right; 
 		
 	else if(root->right == NULL) 
 		return root->left; 

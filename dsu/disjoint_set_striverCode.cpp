@@ -21,6 +21,27 @@ int dist[N+1];
 int source[N+1];
 queue<int> node_queue;
  
+/*
+Details: The "rank" variable in the context of Disjoint Set data structure is used to keep 
+		 track of the "rank" OR "depth" of each element in the set. The rank is an important
+		 concept in optimizing the union operation in the union-find (disjoint set union) data structure 
+		 
+		 Here is how the "rank" variable is used: 
+		 - Initialization: When each element is its own parent (in its own set), the rank of 
+		 				   each element is set to 0 
+		 				   
+		 - Union By Rank: When performing the union operation between two sets represented by 
+		 				  elements "u" and "v", the algorithm compares the ranks of the sets 
+		 				  representatives ("ulp_u" and "ulp_v"). The goal is to merge the smaller 
+		 				  rank set into the larger rank set. 
+		 				  - If the rank of "ulp_u" is less than the rank of "ulp_v", then the parent of 
+		 				  	"ulp_u" is set to "ulp_v"
+		 				  - If the rank of "ulp_u" is greater than the rank of "ulp_v", then the parent of 
+		 				    "ulp_v" is set to "ulp_u"
+		 				  - If the ranks are equal, one set is chosen arbitrarily as the parent, 
+		 				  	and the rank of the chosen parent is incremented 
+		
+*/
 class DisjointSet {
 	vector<int> rank, parent; 
 	
@@ -32,18 +53,23 @@ class DisjointSet {
 			
 			for(int i = 0; i <= n; i++)
 				parent[i] = i; 
-				
 			
 		}
 		
-		int findUPar(int node) // Find algo. of DSU 
+		// Find operation using path compression for efficient representative finding 
+		int findUPar(int node) 
 		{
+			// If the node is its own parent, return the node 
 			if(node == parent[node])
 				return node; 
+				
+			// Perform path compression by recursively finding the parent 
+			// and updating the parent of the current node to the ultimate parent 
 			parent[node] = findUPar(parent[node]); 
 			return parent[node]; 
 		}
 		
+		// Union operation based on rank to optimize the merging of data 
 		void unionByRank(int u, int v)
 		{
 			int ulp_u = findUPar(u); 
